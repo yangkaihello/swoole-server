@@ -7,7 +7,7 @@
  * Time: 下午5:44
  */
 
-namespace console\factory\project\base;
+namespace yangkai\swoole\server\interfaces;
 
 use Swoole\Server;
 
