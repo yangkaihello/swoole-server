@@ -79,7 +79,7 @@ namespace yangkai\swoole\server\shell{
 
                 $config = json_encode($config);
 
-                exec("php ". dirname(__DIR__)  . DIRECTORY_SEPARATOR . "Script.php '{$config}'");
+                system("php ". dirname(__DIR__)  . DIRECTORY_SEPARATOR . "Script.php '{$config}'");
             }
 
 
