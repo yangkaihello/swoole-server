@@ -15,14 +15,14 @@ class Autoload{
 	    $path = str_replace('\\', DIRECTORY_SEPARATOR , $class);
 
 	    $file = $path . '.php';
-	    if (file_exists($file)) {
+        if (file_exists(__DIR__ . DIRECTORY_SEPARATOR . $file)) {
             include_once __DIR__ . DIRECTORY_SEPARATOR . $file;
 	    }
 	}
 
 	public static function psr4($class)
     {
-        $composer = file_get_contents("composer.json");
+        $composer = file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . "composer.json");
         $comopser = json_decode($composer,true);
         $psr = array_keys($comopser['autoload']['psr-4']);
 
